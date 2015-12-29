@@ -1,0 +1,7 @@
+FROM node
+WORKDIR /app
+RUN node --version
+
+# Expose ports and start application
+EXPOSE 3000 8080
+CMD npm run dev

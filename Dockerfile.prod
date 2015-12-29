@@ -1,0 +1,11 @@
+FROM mhart/alpine-node:latest
+WORKDIR /code
+
+# Copy code and install dependencies
+ADD ./app /code
+RUN npm install
+RUN node --version
+
+# Expose ports and start application
+EXPOSE 3000
+CMD ["npm", "start"]
